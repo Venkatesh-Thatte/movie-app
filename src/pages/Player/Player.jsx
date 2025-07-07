@@ -13,20 +13,8 @@ const Player = () => {
     type: "",
   });
 
-  const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0ZmI4NzRlMTdlZWE5ZTNhYjE0ZmMzMTMxYTM0NTBlNCIsIm5iZiI6MTc0ODU4ODk0Mi4zOSwic3ViIjoiNjgzOTU5OGU1MGJjZjdkOTRmOGZlNmM0Iiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.UTanMqS5AM11om8YJBegdWDtGMh434yh-Ys6mqe07cE",
-    },
-  };
-
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`,
-      options
-    )
+    fetch(`https://proxy-tmdb-chi.vercel.app/api/trailer?id=${id}`)
       .then((res) => res.json())
       .then((res) => {
         console.log("Video Results:", res.results);
@@ -37,7 +25,7 @@ const Player = () => {
         setApiData(trailer || {});
       })
       .catch((err) => console.error(err));
-  }, [id]); // ✅ include id here
+  }, [id]);
 
   return (
     <div className="player">
