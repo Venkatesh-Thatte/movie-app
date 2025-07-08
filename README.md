@@ -1,12 +1,10 @@
 # 🎬 Netflix Clone
 
-A full-featured, responsive **Netflix Clone** built using **React**, **Firebase Authentication**, **React Router DOM**, and a **custom Node.js API proxy** for TMDB movie data. This project replicates Netflix's core UI and functionality — including horizontal scroll cards, category-wise movie browsing, and YouTube trailer previews.
+A full-featured, responsive **Netflix Clone** built using **React**, **Firebase Authentication**, **React Router DOM**. This project replicates Netflix's core UI and functionality — including horizontal scroll cards, category-wise movie browsing, and YouTube trailer previews.
 
 ---
 
-## 🔗 Live Link
 
-👉 [Click here to view the live site](https://your-netflix-clone.vercel.app/)  
 
 ## 🎥 Demo Video
 
@@ -50,31 +48,18 @@ A full-featured, responsive **Netflix Clone** built using **React**, **Firebase 
 | React Toastify     | Alerts and Notifications            |
 | TMDB API           | Movie & Trailer Data Source         |
 | YouTube            | Trailer Embeds                      |
-| Vercel             | Hosting (Frontend + API Proxy)      |
+| Vercel             | Hosting (Frontend)      |
 
 ---
 
-## 🔗 API & Proxy
+
 
 ### 🔍 Movie Data & Trailer API
 
 - All data is fetched from **TMDB** (The Movie Database)
-- To avoid CORS issues, this app uses a **Node.js proxy hosted on Vercel**
-
-#### 🧪 Example API Endpoints
-
-> Base URL: [`https://proxy-tmdb-chi.vercel.app`](https://proxy-tmdb-chi.vercel.app)
-
-| Purpose                 | Full Endpoint URL                                                                 |
-|-------------------------|-----------------------------------------------------------------------------------|
-| Get movies by category  | `https://proxy-tmdb-chi.vercel.app/api/movies?type=now_playing`                  |
-| Get trailer by movie ID | `https://proxy-tmdb-chi.vercel.app/api/trailer?id=846422`                        |
-
-- Replace `now_playing` with `top_rated`, `popular`, `upcoming`, etc.
-- Replace the `id` with any valid TMDB movie ID to fetch trailer info.
-
 
 ---
+
 
 ### ⚠️ Disclaimer
 
